@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: 30px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -21,20 +21,31 @@ h1:before {
   margin: 0 auto;
 }
 
-li:after{
-    content: "⭐";
+ul {
+    list-style: none;
 }
 
 li:nth-child(odd) {
-    color: aqua;
+  color: lightblue;
 }
 
+
 li:first-child {
-    color: brown;
+  color: rgb(227, 25, 25) 
+  !important;
 }
 
 li:last-child {
-    color: blanchedalmond;
+  color: blanchedalmond 
+  !important;
+}
+
+li:nth-child(odd):not(:nth-child(3)) {
+  color: lightblue;
+}
+
+li::after {
+    content: "⭐";
 }
 
 section {
