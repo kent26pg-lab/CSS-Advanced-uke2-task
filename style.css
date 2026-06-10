@@ -1,5 +1,5 @@
 * {
-  margin: 20;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -12,7 +12,7 @@ body {
   font-size: 2rem;
 }
 
-h1::before {
+h1:before {
   content: "";
   display: block;
   width: 600px;
@@ -21,7 +21,7 @@ h1::before {
   margin: 0 auto;
 }
 
-li::after{
+li:after{
     content: "⭐";
 }
 
@@ -29,6 +29,31 @@ li:nth-child(odd) {
     color: aqua;
 }
 
-.Btn::hover [
-    
-]
+li:first-child {
+    color: brown;
+}
+
+li:last-child {
+    color: blanchedalmond;
+}
+
+section {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.div1, .div2, .div3 {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 100px;
+}
+
+.div1 { background-color: cyan; }
+.div2 { background-color: darkorchid; }
+.div3 { background-color: greenyellow; }
+
+.Btn:hover{
+    background-color: red;
+}
