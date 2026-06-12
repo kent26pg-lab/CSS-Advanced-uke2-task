@@ -1,5 +1,5 @@
 * {
-  margin: 30px;
+  margin: 15px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -12,6 +12,10 @@ body {
   font-size: 2rem;
 }
 
+h1:focus {
+  outline: 2px solid red;
+}
+
 h1:before {
   content: "";
   display: block;
@@ -22,49 +26,59 @@ h1:before {
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 li:nth-child(odd) {
-  color: lightblue;
+  background-color: lightblue;
 }
 
-
 li:first-child {
-  color: rgb(227, 25, 25) 
-  !important;
+  color: rgb(227, 25, 25) !important;
 }
 
 li:last-child {
-  color: blanchedalmond 
-  !important;
+  color: blanchedalmond !important;
 }
 
-li:nth-child(odd):not(:nth-child(3)) {
-  color: lightblue;
+li:not(:nth-child(4))::after {
+  content: "⭐";
 }
 
-li::after {
-    content: "⭐";
-}
 
 section {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
 }
 
-.div1, .div2, .div3 {
+.div1,
+.div2,
+.div3 {
   display: flex;
   flex-direction: column;
   padding: 40px;
   width: 100px;
 }
 
-.div1 { background-color: cyan; }
-.div2 { background-color: darkorchid; }
-.div3 { background-color: greenyellow; }
+.div1 {
+  background-color: cyan;
+}
+.div2 {
+  background-color: darkorchid;
+}
+.div3 {
+  background-color: greenyellow;
+}
 
-.Btn:hover{
-    background-color: red;
+.btn {
+  padding: 20px;
+}
+
+.btn:hover {
+  background-color: red;
+  transform: translateY(-10px);
+}
+input:focus {
+  background-color: yellow;
 }
